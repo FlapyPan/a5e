@@ -1,12 +1,3 @@
-# a5e
-
-大晚上看 k8s 文档有感，到底是谁起的头把英文单词搞成这样的缩写😓：i18n、a11y、k8s、k3s。
-
-所以写了个小工具将所有单词替换为类似的缩写。
-
-使用方法参见 `test.mjs`：
-
-```javascript
 import a5e from './a5e.mjs'
 
 console.log(a5e(`We choose to go to the moon.
@@ -23,4 +14,3 @@ b5e t2t g2l w2l s3e to o6e a1d m5e t1e b2t of o1r e6s a1d s4s,
 b5e t2t c7e is o1e t2t we a1e w5g to a4t,
 o1e we a1e u7g to p6e, a1d o1e w3h we i4d to w1n, a1d t1e o4s, t1o.
 */
-```
