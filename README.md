@@ -4,7 +4,7 @@
 
 所以写了个小工具将所有单词替换为类似的缩写。
 
-[在线体验](https://flapypan.github.io/a5e/)
+[在线体验](https://flapypan.github.io/a5e/index.html)
 
 使用方法参考：
 
