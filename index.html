@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a5e - FlapyPan</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            color-scheme: light dark;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            padding-block: 0.5em;
+        }
+
+        label {
+            padding: 0.5em;
+        }
+
+        textarea {
+            margin-block: 0.5em;
+            padding: 0.5em;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>a5e</h1>
+    <p>大晚上看 k8s 文档有感，到底是谁起的头把英文单词搞成这样的缩写😓：i18n、a11y、k8s、k3s。</p>
+    <p>所以写了个小工具将所有单词替换为类似的缩写。</p>
+    <p><a href="https://github.com/FlapyPan/a5e">GitHub仓库</a></p>
+    <label for="input">输入：</label>
+    <textarea name="input" id="input" rows="6"></textarea>
+    <label for="output">输出：</label>
+    <textarea name="output" id="output" rows="6"></textarea>
+    <script type="module">
+        import a5e from './a5e.mjs'
+        const queryInput = () => document.querySelector('textarea#input')
+        const queryOutput = () => document.querySelector('textarea#output')
+        queryInput().addEventListener('input', ({ target }) => queryOutput().value = a5e(target.value))
+        queryInput().value = `We choose to go to the moon.
+We choose to go to the moon in this decade and do the other things,
+not because they are easy, but because they are hard,
+because that goal will serve to organize and measure the best of our energies and skills,
+because that challenge is one that we are willing to accept,
+one we are unwilling to postpone, and one which we intend to win, and the others, too. `
+        queryOutput().value = a5e(queryInput().value)
+    </script>
+</body>
+
+</html>

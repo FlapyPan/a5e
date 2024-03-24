@@ -4,7 +4,9 @@
 
 所以写了个小工具将所有单词替换为类似的缩写。
 
-使用方法参见 `test.mjs`：
+[在线体验](https://flapypan.github.io/a5e/)
+
+使用方法参考：
 
 ```javascript
 import a5e from './a5e.mjs'
